@@ -1,0 +1,366 @@
+:root {
+  --primary-bg-color: #EA5C53;
+  --secondary-bg-color: #F1F3F3;
+  --border-primary-color: #92885D;
+  --primary-bg-color-second-page: #D19F6D;
+  --text-dark-color: #231F20;
+  --primary-bg-color-second-page: #D19F6D;
+}
+
+.font-western {
+  font-family: "DM Serif Text", serif;
+}
+
+.font-cowboy {
+  font-family: 'Bleeding Cowboys', sans-serif;
+}
+
+.body-page1 {
+  background-color: var(--primary-bg-color);
+}
+
+.body2 {
+
+  background-color: var(--primary-bg-color-second-page);
+  font: italic normal 1.4em georgia, sans-serif;
+}
+
+.header-page1 {
+  padding: 0;
+  margin-top: 30px;
+
+}
+
+.riga-superiore {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.div-riquadro-original {
+  background-color: var(--secondary-bg-color);
+  height: 100px;
+  border: 2px solid black;
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  border-radius: 20px;
+  transform: translateY(30px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.riga-centrale {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.colonna-tonda-centrale {
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 60%;
+  align-items: end;
+  z-index: 1;
+}
+
+.main-page1 {
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 0 7px 7px black;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.titolo-esteso {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 99vw;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  margin: 0;
+  font-size: clamp(30px, 7vw, 150px);
+  font-weight: 400;
+  text-shadow: 3px 3px 3px black;
+  color: var(--primary-bg-color);
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  height: 32vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.contenitore-andCO {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 32vh;
+  width: 30vw;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  margin: 0;
+  font-size: clamp(20px, 7vw, 100px);
+  font-weight: 400;
+  text-shadow: 3px 3px 3px black;
+  color: var(--primary-bg-color);
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  word-break: break-all;
+  z-index: 2;
+}
+
+.contenitore-catalogue {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20vh;
+  width: 30vw;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  margin: 0;
+  font-size: clamp(20px, 7vw, 100px);
+  font-weight: 400;
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  z-index: 1;
+}
+
+.h3-catalogue {
+  font-size: clamp(7px, 5vw, 100px);
+  font-weight: 400;
+  color: var(--text-dark-color);
+}
+
+.h6-editon {
+  color: var(--secondary-bg-color);
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  word-break: break-all;
+}
+
+.riga-finale {
+  position: relative;
+  margin-top: 50px;
+}
+
+.riga-finale img {
+  z-index: 0;
+}
+
+.bg-finale {
+  background-image: url(media/carte-da-parati-mondo-disegno-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.h3-date {
+  color: var(--primary-bg-color);
+  text-shadow: 3px 3px 3px black;
+  font-size: 100px;
+}
+
+.onHeart {
+  font-size: 100px;
+  color: var(--primary-bg-color);
+  text-shadow: 3px 3px 3px black;
+
+}
+
+.contenitore-showFriend {
+  background-color: var(--secondary-bg-color);
+  font-size: clamp(20px, 7vw, 10px);
+  font-weight: 400;
+  box-shadow: inset 0 0 0 5px var(--border-primary-color), inset 0 0 0 7px black;
+  height: 20%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--secondary-bg-color);
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  border-left: 1 px solid var(--primary-bg-color);
+  border-right: 1px solid var(--primary-bg-color);
+  border-top: 1px solid var(--secondary-bg-color);
+  width: 100%;
+  color: var(--text-dark-color);
+  font-size: 15px;
+
+}
+
+/* mediaQueery schermi grandi*/
+
+@media (max-width: 991px) {
+
+  .contenitore-andCO {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 20vh;
+    top: 30%;
+  }
+
+  .contenitore-catalogue {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 15vh;
+    top: 37%;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .titolo-esteso {
+    font-size: clamp(20px, 6vw, 80px);
+    height: 30vh;
+    top: 15%;
+    text-shadow: none;
+  }
+
+
+  .contenitore-andCO {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 20vh;
+    top: 25%;
+  }
+
+  .contenitore-catalogue {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 15vh;
+    top: 32%;
+
+  }
+
+  .riga-finale img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 570px) {
+
+
+  .titolo-esteso {
+
+    font-size: clamp(20px, 6vw, 80px);
+    height: 27vh;
+    top: 19%;
+
+  }
+
+
+  .contenitore-andCO {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 20vh;
+    top: 27%;
+  }
+
+  .contenitore-catalogue {
+    font-size: clamp(15px, 5vw, 60px);
+    height: 15vh;
+    top: 34%;
+    width: 45vw;
+
+  }
+
+  footer {
+    background-color: var(--primary-bg-color);
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-left: 1 px solid var(--primary-bg-color);
+    border-right: 1px solid var(--primary-bg-color);
+    border-top: 1px solid var(--secondary-bg-color);
+    width: 100%;
+    color: var(--secondary-bg-color);
+    text-shadow: 3px 3px 3px black;
+
+  }
+
+  .fiori-cascata-sx {
+    background-image: url(media/fiori_a_cascata_sx.png);
+    background-size: contain;
+
+  }
+
+  .fiori-cascata-dx {
+    background-image: url(media/fiori_a_cascata_dx.png);
+    background-size: contain;
+
+  }
+
+}
+
+/* mediaQuery per schermi piccoli  */
+
+@media (max-width: 480px) {
+
+  .titolo-esteso {
+
+    font-size: clamp(18px, 7vw, 60px);
+    height: 15vh;
+  }
+
+  .contenitore-andCO {
+
+    font-size: clamp(12px, 6vw, 40px);
+    height: 15vh;
+  }
+
+  .contenitore-catalogue {
+
+    font-size: clamp(12px, 6vw, 40px);
+    height: 10vh;
+  }
+
+  .riga-finale img {
+
+    width: 100px;
+  }
+
+  .bg-finale {
+    height: 150px;
+  }
+
+  .h3-date {
+    font-size: 40px;
+  }
+
+  .onHeart {
+    font-size: 40px;
+  }
+
+  .contenitore-showFriend h3 {
+
+    font-size: 12px;
+
+  }
+
+}
