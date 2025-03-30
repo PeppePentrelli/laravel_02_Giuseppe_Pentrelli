@@ -23,8 +23,10 @@
 <body class="body3">
 
     <!-- Inizio Navbar -->
-    <nav class="navbar navbar-expand-lg navbar3">
+    <nav class="navbar navbar-expand-lg navbar3 sticky-top">
         <div class="container-fluid">
+            <img class="me-4" style="height: 45px" src="media/Red_Dead_Redemption_2_Logo.png" alt=""
+                class="img-fluid">
             <h2 class="navbar-brand-custom mt-2 ">Wheeler, Rawson and Co.</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,15 +35,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="/">Home</a>
+                        <a class="nav-link " aria-current="page" href="{{ route('paginaHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/abiti">Abiti</a>
+                        <a class="nav-link" href="{{ route('paginaNegozio') }}">Negozio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/galleria">Galleria</a>
+                        <a class="nav-link" href="{{ route('paginaServizi') }}">Servizi</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('paginaGalleria') }}">Galleria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('paginaChiSiamo') }}">Chi Siamo</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -54,8 +61,8 @@
         {{-- <audio id="myAudio" src="media/ThatsThe WayItIsThe MusicofRedDeadRedemption2.mp3"></audio> --}}
         <audio id="myAudio" src="media/ColonnaSonoraFinale.mp3"></audio>
 
-        <div class="row"><button class="my-element">Clicca l'icona e attiva la musica per goderti un esperienza compleata <i
-                    class="fa-solid fa-volume-xmark sound-off"></i> </button></div>
+        <div class="row"><button class="my-element">Clicca l'icona e attiva la musica per goderti un esperienza
+                compleata <i class="fa-solid fa-volume-xmark sound-off"></i> </button></div>
     </div>
     {{-- sezione audio --}}
 
@@ -139,88 +146,25 @@
 
 
 
-    {{-- Sesta sezione --}}
-    <div class="mt-5">
-        <h2 class="text-center secondary-text-color">All Gang Members</h2>
-    </div>
     <section class="container-fluid secondary-text-color ">
-        <div class="row overFlowRow">
-            <div class="col-12 d-flex align-div ">
-                {{-- Hosea picture --}}
-                <div class="container-img-picture ">
-                    <h3 class="text-center">Hosea Mattews</h3>
-                    <img class="img-fluid img-picture" src="media/hoseaPicture.png" alt="Immagine di Hosea Mattews">
+        <div class="row overFlowRow overflow-auto d-flex flex-nowrap">
+            @foreach ($galleryFuorilegge as $item)
+                <div class="col-md-3 d-flex align-div ">
+                    <div class="container-img-picture ">
+                        <a class="outLaw-ancor"
+                            href="{{ route('paginaDettagliFuorilegge', ['uri' => $item['uri']]) }}">
+                            <h3 class="text-center">{{ $item['nome'] }}</h3>
+                            <img class="img-fluid img-picture" src="{{ $item['immagine'] }}"
+                                alt="{{ $item['alt'] }}">
+                        </a>
+                        <button type="button" class="btn btn-dark mt-5">
+                            <a class="outLaw-ancor mt-4"
+                                href="{{ route('paginaDettagliFuorilegge', ['uri' => $item['uri']]) }}">Maggiori
+                                Dettagli</a>
+                        </button>
+                    </div>
                 </div>
-                {{-- Jhon Picture --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Jhon marston</h3>
-                    <img class=" ms-5 img-fluid img-picture" src="media/jhonPicture.png"
-                        alt="Immagine di Jhon Marston">
-                </div>
-                {{-- Susan Grimshaw picture --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Susan Grimshaw</h3>
-                    <img class="img-fluid img-picture" src="media/Susan GrimshawPicture.png"
-                        alt="Immagine di Susan Grimshaw">
-                </div>
-                {{-- Molly o'shea picture  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Molly O'Shea</h3>
-                    <img class="img-fluid img-picture" src="media/MollyOSheaPicture.png"
-                        alt="Immagine di Molly O'Shea">
-                </div>
-                {{-- Chales Smhit picture  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Charles Smith</h3>
-                    <img class="img-fluid img-picture" src="media/charlesSmithPicture.png"
-                        alt="Immagine di charles smith">
-                </div>
-                {{-- javier escuella picture  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Javier Escuella</h3>
-                    <img class=" ms-5  img-fluid img-picture" src="media/javierPicture(3).jpg"
-                        alt="Immagine di javier escuella">
-                </div>
-                {{-- Bill picture  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Bill Williamson</h3>
-                    <img class="img-fluid img-picture" src="media/billWilliamsonPicture.png"
-                        alt="immagine di bill williamson">
-                </div>
-                {{-- sadie picture  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Sadie Alder</h3>
-                    <img class="img-fluid img-picture" src="media/sadieAlderPicture.png"
-                        alt="immagine di sadie alder">
-                </div>
-                {{-- lenny --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Lenny Summers</h3>
-                    <img class="img-fluid img-picture" src="media/lennyPicture.png" alt="immagine di lenny summers">
-                </div>
-                {{-- Micah Bell --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Micah Bell</h3>
-                    <img class="img-fluid img-picture" src="media/MicahBellPicture.png" alt="immagine di micah bell">
-                </div>
-                {{-- Abigail Roberts --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Abigail Roberts</h3>
-                    <img class="img-fluid img-picture" src="media/abigailRobertsPicture.png"
-                        alt="immagine di abigail roberts">
-                </div>
-                {{-- Jack Marston --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Jack Marston</h3>
-                    <img class="img-fluid img-picture" src="media/jackPicture.png"
-                        alt="Immagine di Jack Marston bambino, figlio di jhon">
-                </div>
-                {{-- Karen  --}}
-                <div class="container-img-picture">
-                    <h3 class="text-center">Karen Jones</h3>
-                    <img class="img-fluid img-picture" src="media/karenPicture.png" alt="immagine di Karen Jones">
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 
@@ -651,8 +595,8 @@
                 <img src="media/arthutTubercolosi2.jpg" alt="il dottore visita arthur" class="img-fluid">
             </div>
             <div class="col-12">
-                <img src="media/tuberculosis.jpg"
-                    alt="arthur realizza di essere gravemente malato di tubercolosi" class="img-fluid">
+                <img src="media/tuberculosis.jpg" alt="arthur realizza di essere gravemente malato di tubercolosi"
+                    class="img-fluid">
             </div>
             <div class="col-12">
                 <h2 class="text-center my-5 secondary-text-color">You got tuberculosis..</h2>
@@ -846,7 +790,6 @@
         {{-- Custom script --}}
 
         <script>
-
             const myAudio = document.getElementById('myAudio');
             const myElements = document.querySelector('.my-element');
             const soundOff = document.querySelector('.sound-off');
@@ -863,4 +806,5 @@
             });
         </script>
 </body>
+
 </html>

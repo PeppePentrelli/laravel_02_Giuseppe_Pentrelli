@@ -21,8 +21,10 @@
 
 <body class="body-page1">
     <!-- Inizio Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
+            <img class="me-4" style="height: 45px" src="media/Red_Dead_Redemption_2_Logo.png" alt=""
+                class="img-fluid">
             <a class="navbar-brand" href="#">Wheeler,Rawson and Co.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,19 +33,74 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('paginaHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/abiti">Abiti</a>
+                        <a class="nav-link" href="{{ route('paginaNegozio') }}">Negozio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/galleria">Galleria</a>
+                        <a class="nav-link" href="{{ route('paginaServizi') }}">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('paginaGalleria') }}">Galleria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('paginaChiSiamo') }}">Chi Siamo</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fine Navbar -->
+
+    {{-- sezione benvenuti --}}
+    <section class="container secondary-text-color text-center text-shadow-rdr2 mt-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mt-5">
+                <img class="img-fluid" src="media/Red_Dead_Redemption_2_Logo.png" alt="">
+            </div>
+            <div class="row mt-5">
+                <h1>Benvenuti, Compagni Fuorilegge!</h1>
+                <div class="col-12">
+                    <p>Siete nel posto giusto se il ruggito del vostro cavallo preferito è la vostra colonna sonora, se
+                        le
+                        praterie sconfinate del West vi chiamano e se le storie di Arthur Morgan e della banda di Van
+                        der
+                        Linde vi hanno rubato il cuore.</p>
+                    <p>Questo blog è un rifugio per tutti noi che viviamo e respiriamo Red Dead Redemption 2. Qui
+                        troverete:
+                    </p>
+                    <ol class="list-style-none">
+                        <li>
+                            <h4>Approfondimenti:</h4>
+                            <p>Analisi dettagliate dei personaggi, della trama e del mondo di gioco.</p>
+                        </li>
+                        <li>
+                            <h4>Guide:</h4>
+                            <p>Consigli e trucchi per padroneggiare ogni aspetto del gioco, dalle sparatorie alle
+                                cavalcate.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Discussioni:</h4>
+                            <p> Uno spazio per condividere le vostre esperienze, teorie e passioni con altri
+                                appassionati.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Curiosità:</h4>
+                            <p>Segreti nascosti, easter egg e tutto ciò che rende Red Dead Redemption 2 un capolavoro.
+                            </p>
+                        </li>
+                    </ol>
+                    <h3>Preparatevi a sellare i vostri cavalli e a unirvi a noi in questa avventura senza fine nel
+                        selvaggio
+                        West!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- sezione benvenuti --}}
 
 
     <!-- Inizio Header -->
@@ -134,6 +191,7 @@
     </header>
     <!-- Fine Header -->
 
+    
     <!-- footer -->
     <footer class="container-fluid ">
         <div class="row justify-content-center text-center mt-5">

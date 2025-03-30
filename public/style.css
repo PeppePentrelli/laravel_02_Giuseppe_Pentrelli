@@ -19,10 +19,23 @@
   background-color: var(--primary-bg-color);
 }
 
-.body2 {
 
-  background-color: var(--primary-bg-color-second-page);
-  font: italic normal 1.4em georgia, sans-serif;
+
+.secondary-text-color{ 
+
+  color: var(--secondary-bg-color);
+ }
+
+ .text-shadow-rdr2 {
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.6), 
+    3px 3px 6px rgba(0, 0, 0, 0.4), 
+    4px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.list-style-none{ 
+
+  list-style: none;
 }
 
 .header-page1 {
@@ -201,6 +214,52 @@
   justify-content: center;
 }
 
+
+/* pagina servizi */
+
+.paragrafo-guida{ 
+
+font-size: large;
+text-shadow: 2px 2px 2px black;
+line-height: 2;
+
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgrey;
+}
+
+.h1-custom{ 
+
+  
+  text-shadow: 2px 2px 2px black;
+
+  
+  }
+
+  .form-custom{
+
+border: solid 2px var(--secondary-bg-color);
+background-image: url(media/form-2.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 700px;
+color: var(--secondary-bg-color);
+box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.6); 
+
+  }
+
+
+
 /* footer */
 
 footer {
@@ -216,6 +275,79 @@ footer {
   font-size: 15px;
 
 }
+
+
+.tronca-testo {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  border: solid 2px black;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.iframe-container{ 
+  
+  height: 300px;
+  width: 100%;
+  border: solid 2px var(--secondary-bg-color);
+}
+
+.contentiore-place-iframe{ 
+
+  position: relative;
+  transition: 1s;
+}
+
+.icon-button {
+  background: none; 
+  border: none; 
+  padding: 0; 
+  outline: none; 
+  cursor: pointer; 
+}
+
+.icon-button > span{
+  color: var(--secondary-bg-color); 
+  font-size: 1.2em; 
+}
+
+
+
+.placeHolder{ 
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 300px;
+  background-color: darkgray;
+  display: flex;
+   justify-content: center;
+   align-items: center;
+    z-index:1;
+  border: solid 2px var(--secondary-bg-color);
+
+}
+
+
 
 /* mediaQueery schermi grandi*/
 
@@ -237,6 +369,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .div-riquadro-original {
+    width: 200px;
+   }
 
   .titolo-esteso {
     font-size: clamp(20px, 6vw, 80px);
@@ -262,10 +398,18 @@ footer {
   .riga-finale img {
     width: 120px;
   }
+
+
+
 }
 
 @media (max-width: 570px) {
 
+
+  .colonna-tonda-centrale {
+    height: 80vh !important;
+
+  }
 
   .titolo-esteso {
 
@@ -322,6 +466,11 @@ footer {
 
 @media (max-width: 480px) {
 
+
+  .div-riquadro-original {
+   width: 200px;
+  }
+
   .titolo-esteso {
 
     font-size: clamp(18px, 7vw, 60px);
@@ -362,5 +511,19 @@ footer {
     font-size: 12px;
 
   }
+
+}
+
+
+@media (max-width: 480px) {
+
+
+  .div-riquadro-original {
+   width: 150px;
+   margin-right: auto;
+   margin-left: auto;
+  }
+
+
 
 }
