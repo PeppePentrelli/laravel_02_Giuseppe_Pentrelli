@@ -450,7 +450,7 @@ public function paginaNegozioFunction() {
      
         foreach ($this->indumenti as $indumento) {
             if ($indumento['id'] == $id) {
-                return view('DettagliNegozio', ['indumento' => $indumento, 'indumenti' => $this->indumenti]);
+                return view('dettagliNegozio', ['indumento' => $indumento, 'indumenti' => $this->indumenti]);
             }
         }
     }
